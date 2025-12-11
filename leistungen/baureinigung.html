@@ -28,36 +28,47 @@
         }
     </script>
 </head>
-<body class="bg-bg text-text font-sans antialiased text-[#0A0A0A]">
+<body class="bg-bg text-text font-sans antialiased text-[#0A0A0A] flex flex-col min-h-screen">
 
     <!-- Header -->
-    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 h-20 flex items-center">
+    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 h-20 flex items-center shadow-sm transition-all duration-300">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="../index.html" class="text-2xl font-extrabold text-primary tracking-tight">SCHUHMACHER<span class="text-accent">.</span></a>
-            <nav class="hidden md:flex gap-8 font-semibold text-sm text-primary">
-                <a href="../index.html" class="hover:text-accent font-bold uppercase tracking-wide text-xs">Startseite</a>
-                <a href="../index.html#services" class="hover:text-accent font-bold uppercase tracking-wide text-xs">Leistungen</a>
-                <a href="../ueber-uns.html" class="hover:text-accent font-bold uppercase tracking-wide text-xs">Über uns</a>
+            <div class="flex items-center gap-4">
+                 <!-- Back Button (Distinct) -->
+                 <a href="../index.html" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-primary hover:bg-accent hover:text-white transition-colors" title="Zurück zur Startseite">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                 </a>
+                 <!-- Logo -->
+                 <a href="../index.html" class="block h-12">
+                    <img src="../assets/logo.png" alt="Schuhmacher Gebäudeservices" class="h-full w-auto object-contain">
+                 </a>
+            </div>
+
+            <nav class="hidden md:flex gap-8 font-semibold text-sm text-primary items-center">
+                <a href="../index.html" class="hover:text-accent font-bold uppercase tracking-wide text-xs transition-colors">Startseite</a>
+                <a href="../index.html#services" class="hover:text-accent font-bold uppercase tracking-wide text-xs transition-colors">Leistungen</a>
+                <a href="../ueber-uns.html" class="hover:text-accent font-bold uppercase tracking-wide text-xs transition-colors">Über uns</a>
+                <!-- CTA -->
                 <a href="../kontakt.html" class="px-6 py-3 bg-primary text-white rounded font-bold hover:bg-primary/90 transition shadow-lg shadow-primary/20">Angebot anfordern</a>
             </nav>
         </div>
     </header>
 
-    <main class="pt-20">
+    <main class="pt-20 flex-grow">
         <!-- 1. HERO SECTION -->
         <section class="relative min-h-[600px] flex items-center overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img src="../assets/renovation.webp" class="w-full h-full object-cover animate-fade-in-slow scale-105" alt="Hero">
+                <img src="../assets/renovation.webp" class="w-full h-full object-cover animate-fade-in-slow scale-105" alt="Baureinigung">
                 <div class="absolute inset-0 bg-gradient-to-r from-[#0F3A56]/95 via-[#0F3A56]/80 to-transparent"></div>
             </div>
             <div class="container mx-auto px-4 relative z-10 text-white mt-12">
                 <div class="max-w-2xl animate-slide-up">
-                    <span class="inline-block py-1 px-3 border border-white/20 rounded-full text-xs font-bold tracking-widest uppercase mb-6 bg-white/5 backdrop-blur">Baustelle fertig. Einzug sicher.</span>
-                    <h1 class="text-5xl lg:text-6xl font-extrabold leading-[1.1] mb-6 tracking-tight">Service</h1>
+                    <span class="inline-block py-1 px-3 border border-white/20 rounded-full text-xs font-bold tracking-widest uppercase mb-6 bg-white/5 backdrop-blur">Einzug sicherstellen.</span>
+                    <h1 class="text-5xl lg:text-6xl font-extrabold leading-[1.1] mb-6 tracking-tight">Baureinigung</h1>
                     <p class="text-xl text-gray-200 mb-8 leading-relaxed font-medium">Professionelle Baugrob- und Baufeinreinigung für den perfekten Abschluss.</p>
                     
                     <ul class="space-y-3 mb-10">
-                        <li class="flex items-center gap-3"><span class="text-accent">✓</span> Termingarantie</li><li class="flex items-center gap-3"><span class="text-accent">✓</span> Zementschleier-Ex</li><li class="flex items-center gap-3"><span class="text-accent">✓</span> Abnahme-Sicherheit</li>
+                        <li class="flex items-center gap-3"><span class="text-accent font-bold">✓</span> <span class="font-semibold">Termingarantie</span></li><li class="flex items-center gap-3"><span class="text-accent font-bold">✓</span> <span class="font-semibold">Zementschleier-Ex</span></li><li class="flex items-center gap-3"><span class="text-accent font-bold">✓</span> <span class="font-semibold">Abnahme-Sicherheit</span></li>
                     </ul>
 
                     <div class="flex flex-wrap gap-4">
@@ -76,7 +87,7 @@
                     <span class="font-bold text-primary">5.0/5.0 Kundenzufriedenheit</span>
                 </div>
                 <div class="flex gap-8 text-sm text-gray-500 hidden md:flex">
-                    <span class="bg-gray-50 px-3 py-1 rounded border border-gray-100">"Rettung in letzter Minute."</span><span class="bg-gray-50 px-3 py-1 rounded border border-gray-100">"Alles glänzt."</span><span class="bg-gray-50 px-3 py-1 rounded border border-gray-100">"Pünktlich zur Übergabe."</span>
+                    <span class="bg-gray-50 px-3 py-1 rounded border border-gray-100 text-gray-600 italic">"Rettung in letzter Minute."</span><span class="bg-gray-50 px-3 py-1 rounded border border-gray-100 text-gray-600 italic">"Alles glänzt."</span><span class="bg-gray-50 px-3 py-1 rounded border border-gray-100 text-gray-600 italic">"Pünktlich zur Übergabe."</span>
                 </div>
             </div>
         </section>
@@ -86,16 +97,16 @@
             <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
                     <h2 class="text-3xl font-bold text-primary mb-6">Chaos vor dem Einzug</h2>
-                    <p class="text-lg text-gray-600 leading-relaxed mb-8">Handwerker hinterlassen oft Spuren: Mörtelreste, Farbspritzer, Etiketten und feinsten Staub. Eine normale 'Putzaktion' reicht hier nicht, um Schäden zu vermeiden.</p>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">Mörtelreste, Farbspritzer und Feinstaub. Eine normale 'Putzaktion' reicht hier nicht aus.</p>
                     <div class="p-6 bg-red-50 border-l-4 border-red-400 rounded-r-lg">
                         <p class="text-red-900 font-medium italic">"Qualitätsprobleme sind der Hauptgrund für Wechsel bei Dienstleistern."</p>
                     </div>
                 </div>
                 <div>
                     <h2 class="text-3xl font-bold text-accent mb-6">Fachgerechte Bauendreinigung</h2>
-                    <p class="text-lg text-gray-800 leading-relaxed mb-8 font-medium">Wir machen Ihr Objekt bezugsfertig. Mit Spezialchemie gegen Zementschleier und dem richtigen Know-how für empfindliche neue Oberflächen.</p>
+                    <p class="text-lg text-gray-800 leading-relaxed mb-8 font-medium">Wir machen Ihr Objekt bezugsfertig. Mit Spezialchemie gegen Zementschleier und Know-how für neue Oberflächen.</p>
                     <ul class="space-y-4">
-                        <li class="flex items-start gap-3"><span class="text-green-500 font-bold">→</span> Makellose Böden und Fenster</li><li class="flex items-start gap-3"><span class="text-green-500 font-bold">→</span> Keine Staubreste in Ritzen</li><li class="flex items-start gap-3"><span class="text-green-500 font-bold">→</span> Erfolgreiche Bauabnahme</li><li class="flex items-start gap-3"><span class="text-green-500 font-bold">→</span> Sofortiger Einzug möglich</li>
+                        <li class="flex items-start gap-3 p-3 bg-white rounded shadow-sm border border-gray-100"><span class="text-green-500 font-bold mt-0.5">→</span> <span class="font-medium text-gray-700">Makellose Böden</span></li><li class="flex items-start gap-3 p-3 bg-white rounded shadow-sm border border-gray-100"><span class="text-green-500 font-bold mt-0.5">→</span> <span class="font-medium text-gray-700">Staubfreie Ritzen</span></li><li class="flex items-start gap-3 p-3 bg-white rounded shadow-sm border border-gray-100"><span class="text-green-500 font-bold mt-0.5">→</span> <span class="font-medium text-gray-700">Erfolgreiche Abnahme</span></li><li class="flex items-start gap-3 p-3 bg-white rounded shadow-sm border border-gray-100"><span class="text-green-500 font-bold mt-0.5">→</span> <span class="font-medium text-gray-700">Sofortiger Einzug</span></li>
                     </ul>
                 </div>
             </div>
@@ -105,16 +116,18 @@
         <section class="py-24 bg-white">
             <div class="container mx-auto px-4">
                 <div class="max-w-3xl mb-12">
-                    <h2 class="text-3xl font-bold text-primary mb-4">Unser Leistungsmodul: Baustelle</h2>
+                    <h2 class="text-3xl font-bold text-primary mb-4">Leistungsmodul: Baustelle</h2>
                     <p class="text-gray-600">Transparenz bis ins Detail.</p>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
-                        <div class="flex items-start gap-3"><div class="w-2 h-2 mt-2 rounded-full bg-accent"></div><p class="text-gray-700">Baugrobreinigung (Entfernung von Schutt/Müll)</p></div><div class="flex items-start gap-3"><div class="w-2 h-2 mt-2 rounded-full bg-accent"></div><p class="text-gray-700">Baufeinreinigung (Bezugsfertigkeit)</p></div><div class="flex items-start gap-3"><div class="w-2 h-2 mt-2 rounded-full bg-accent"></div><p class="text-gray-700">Zementschleierentfernung auf Fliesen</p></div><div class="flex items-start gap-3"><div class="w-2 h-2 mt-2 rounded-full bg-accent"></div><p class="text-gray-700">Entfernung von Farb- und Lackresten</p></div><div class="flex items-start gap-3"><div class="w-2 h-2 mt-2 rounded-full bg-accent"></div><p class="text-gray-700">Ersteinpflege von Bodenbelägen</p></div><div class="flex items-start gap-3"><div class="w-2 h-2 mt-2 rounded-full bg-accent"></div><p class="text-gray-700">Reinigung von Sanitärkeramik und Armaturen</p></div>
+                        <div class="flex items-start gap-3"><div class="w-1.5 h-1.5 mt-2.5 rounded-full bg-accent flex-shrink-0"></div><p class="text-gray-700 font-medium">Baugrobreinigung (Schutt)</p></div><div class="flex items-start gap-3"><div class="w-1.5 h-1.5 mt-2.5 rounded-full bg-accent flex-shrink-0"></div><p class="text-gray-700 font-medium">Baufeinreinigung</p></div><div class="flex items-start gap-3"><div class="w-1.5 h-1.5 mt-2.5 rounded-full bg-accent flex-shrink-0"></div><p class="text-gray-700 font-medium">Zementschleier entfernen</p></div><div class="flex items-start gap-3"><div class="w-1.5 h-1.5 mt-2.5 rounded-full bg-accent flex-shrink-0"></div><p class="text-gray-700 font-medium">Farb-/Lackreste entfernen</p></div><div class="flex items-start gap-3"><div class="w-1.5 h-1.5 mt-2.5 rounded-full bg-accent flex-shrink-0"></div><p class="text-gray-700 font-medium">Boden-Einpflege</p></div><div class="flex items-start gap-3"><div class="w-1.5 h-1.5 mt-2.5 rounded-full bg-accent flex-shrink-0"></div><p class="text-gray-700 font-medium">Sanitär-Grundreinigung</p></div>
                     </div>
-                    <div class="bg-primary text-white p-8 rounded-2xl shadow-xl">
-                        <h3 class="font-bold text-accent text-lg mb-4 uppercase tracking-wider">Use Case</h3>
-                        <p class="text-gray-200 italic leading-relaxed">"Reinigung eines Neubau-Mehrfamilienhauses (12 Einheiten) in 2 Tagen vor Einzugstermin."</p>
+                    <div class="bg-primary text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <div class="flex items-center gap-2 mb-4">
+                             <div class="px-2 py-1 bg-accent text-primary text-xs font-bold rounded uppercase">Use Case</div>
+                        </div>
+                        <p class="text-gray-200 italic leading-relaxed font-medium">"Neubau (12 Einheiten): Komplette Feinreinigung in 2 Tagen inkl. Fenster und Tiefgarage pünktlich zum Einzug."</p>
                     </div>
                 </div>
             </div>
@@ -125,7 +138,31 @@
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold text-center text-primary mb-16">Warum Schuhmacher am Bau</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="p-6 bg-white rounded shadow-sm border-l-4 border-accent"><h4 class="font-bold text-primary mb-2">✓ Vorteil</h4><p class="text-sm text-gray-600">Flexibilität bei Terminverschiebungen am Bau</p></div><div class="p-6 bg-white rounded shadow-sm border-l-4 border-accent"><h4 class="font-bold text-primary mb-2">✓ Vorteil</h4><p class="text-sm text-gray-600">Kenntnis über Reinigungsvorschriften neuer Bodenbeläge</p></div><div class="p-6 bg-white rounded shadow-sm border-l-4 border-accent"><h4 class="font-bold text-primary mb-2">✓ Vorteil</h4><p class="text-sm text-gray-600">Haftungssicherheit bei Schäden</p></div><div class="p-6 bg-white rounded shadow-sm border-l-4 border-accent"><h4 class="font-bold text-primary mb-2">✓ Vorteil</h4><p class="text-sm text-gray-600">Kapazität für große Flächen</p></div><div class="p-6 bg-white rounded shadow-sm border-l-4 border-accent"><h4 class="font-bold text-primary mb-2">✓ Vorteil</h4><p class="text-sm text-gray-600">Schlüsselfertige Übergabe</p></div><div class="p-6 bg-white rounded shadow-sm border-l-4 border-accent"><h4 class="font-bold text-primary mb-2">✓ Vorteil</h4><p class="text-sm text-gray-600">Zusammenarbeit mit Bauleitern</p></div>
+                    
+        <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-accent/50 transition-colors">
+            <div class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold mb-3">✓</div>
+            <p class="text-gray-700 font-semibold">Flexibilität bei Verzug</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-accent/50 transition-colors">
+            <div class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold mb-3">✓</div>
+            <p class="text-gray-700 font-semibold">Materialkunde (neue Böden)</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-accent/50 transition-colors">
+            <div class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold mb-3">✓</div>
+            <p class="text-gray-700 font-semibold">Haftungssicherheit</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-accent/50 transition-colors">
+            <div class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold mb-3">✓</div>
+            <p class="text-gray-700 font-semibold">Große Kapazitäten</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-accent/50 transition-colors">
+            <div class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold mb-3">✓</div>
+            <p class="text-gray-700 font-semibold">Schlüsselfertig</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-accent/50 transition-colors">
+            <div class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold mb-3">✓</div>
+            <p class="text-gray-700 font-semibold">Kooperation mit Bauleitern</p>
+        </div>
                 </div>
             </div>
         </section>
@@ -135,7 +172,27 @@
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold text-center text-primary mb-16">Unser Prozess</h2>
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div class="relative pl-8 md:pl-0"><div class="md:hidden absolute left-0 top-0 text-3xl font-bold text-gray-100">1</div><h4 class="font-bold text-primary text-lg mb-2"><span class="hidden md:inline text-accent mr-2">1.</span>Vor-Check</h4><p class="text-gray-600 text-sm">Begehung des Baufortschritts.</p></div><div class="relative pl-8 md:pl-0"><div class="md:hidden absolute left-0 top-0 text-3xl font-bold text-gray-100">2</div><h4 class="font-bold text-primary text-lg mb-2"><span class="hidden md:inline text-accent mr-2">2.</span>Grobphase</h4><p class="text-gray-600 text-sm">Laufende Müllbeseitigung (optional).</p></div><div class="relative pl-8 md:pl-0"><div class="md:hidden absolute left-0 top-0 text-3xl font-bold text-gray-100">3</div><h4 class="font-bold text-primary text-lg mb-2"><span class="hidden md:inline text-accent mr-2">3.</span>Finale</h4><p class="text-gray-600 text-sm">Intensivreinigung aller Flächen.</p></div><div class="relative pl-8 md:pl-0"><div class="md:hidden absolute left-0 top-0 text-3xl font-bold text-gray-100">4</div><h4 class="font-bold text-primary text-lg mb-2"><span class="hidden md:inline text-accent mr-2">4.</span>Übergabe</h4><p class="text-gray-600 text-sm">Protokollierte Übergabe an Eigentümer.</p></div>
+                    
+        <div class="relative pl-4 md:pl-0 border-l-2 md:border-l-0 border-accent/30 md:border-none pb-8 md:pb-0 last:pb-0">
+             <div class="hidden md:flex w-12 h-12 bg-primary text-white rounded-xl items-center justify-center font-bold text-xl mb-4 shadow-lg shadow-primary/20">1</div>
+             <h4 class="font-bold text-primary text-lg mb-2"><span class="md:hidden text-accent mr-2">1.</span>Check</h4>
+             <p class="text-gray-600 text-sm leading-relaxed">Baufortschritt prüfen.</p>
+        </div>
+        <div class="relative pl-4 md:pl-0 border-l-2 md:border-l-0 border-accent/30 md:border-none pb-8 md:pb-0 last:pb-0">
+             <div class="hidden md:flex w-12 h-12 bg-primary text-white rounded-xl items-center justify-center font-bold text-xl mb-4 shadow-lg shadow-primary/20">2</div>
+             <h4 class="font-bold text-primary text-lg mb-2"><span class="md:hidden text-accent mr-2">2.</span>Grob</h4>
+             <p class="text-gray-600 text-sm leading-relaxed">Müll raus.</p>
+        </div>
+        <div class="relative pl-4 md:pl-0 border-l-2 md:border-l-0 border-accent/30 md:border-none pb-8 md:pb-0 last:pb-0">
+             <div class="hidden md:flex w-12 h-12 bg-primary text-white rounded-xl items-center justify-center font-bold text-xl mb-4 shadow-lg shadow-primary/20">3</div>
+             <h4 class="font-bold text-primary text-lg mb-2"><span class="md:hidden text-accent mr-2">3.</span>Fein</h4>
+             <p class="text-gray-600 text-sm leading-relaxed">Intensivreinigung.</p>
+        </div>
+        <div class="relative pl-4 md:pl-0 border-l-2 md:border-l-0 border-accent/30 md:border-none pb-8 md:pb-0 last:pb-0">
+             <div class="hidden md:flex w-12 h-12 bg-primary text-white rounded-xl items-center justify-center font-bold text-xl mb-4 shadow-lg shadow-primary/20">4</div>
+             <h4 class="font-bold text-primary text-lg mb-2"><span class="md:hidden text-accent mr-2">4.</span>Übergabe</h4>
+             <p class="text-gray-600 text-sm leading-relaxed">Protokoll.</p>
+        </div>
                 </div>
             </div>
         </section>
@@ -143,9 +200,29 @@
         <!-- 7. ZIELGRUPPEN -->
         <section class="py-24 bg-primary text-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-12 text-center">Branchenlösungen</h2>
+                <h2 class="text-3xl font-bold mb-12 text-center">Für wen wir arbeiten</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                    <div class="p-4 bg-white/10 rounded border border-white/20"><h5 class="font-bold text-white mb-1">Bauträger</h5><p class="text-xs text-gray-300">Verlässlicher Partner für Projektabschlüsse.</p></div><div class="p-4 bg-white/10 rounded border border-white/20"><h5 class="font-bold text-white mb-1">Architekten</h5><p class="text-xs text-gray-300">Sicherstellung der Design-Wirkung.</p></div><div class="p-4 bg-white/10 rounded border border-white/20"><h5 class="font-bold text-white mb-1">Private Bauherren</h5><p class="text-xs text-gray-300">Entlastung im Stressphasen.</p></div><div class="p-4 bg-white/10 rounded border border-white/20"><h5 class="font-bold text-white mb-1">Ladenbau</h5><p class="text-xs text-gray-300">Reinigung vor Store-Opening.</p></div><div class="p-4 bg-white/10 rounded border border-white/20"><h5 class="font-bold text-white mb-1">Sanierungsfirmen</h5><p class="text-xs text-gray-300">Abschluss von Renovierungen.</p></div>
+                    
+        <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition">
+            <h5 class="font-bold text-white mb-1 tracking-wide">Bauträger</h5>
+            <p class="text-xs text-blue-100/80">Projektabschluss.</p>
+        </div>
+        <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition">
+            <h5 class="font-bold text-white mb-1 tracking-wide">Architekten</h5>
+            <p class="text-xs text-blue-100/80">Design-Wirkung.</p>
+        </div>
+        <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition">
+            <h5 class="font-bold text-white mb-1 tracking-wide">Bauherren</h5>
+            <p class="text-xs text-blue-100/80">Stressfrei einziehen.</p>
+        </div>
+        <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition">
+            <h5 class="font-bold text-white mb-1 tracking-wide">Ladenbau</h5>
+            <p class="text-xs text-blue-100/80">Store-Opening.</p>
+        </div>
+        <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition">
+            <h5 class="font-bold text-white mb-1 tracking-wide">Sanierer</h5>
+            <p class="text-xs text-blue-100/80">Renovierungs-Ende.</p>
+        </div>
                 </div>
             </div>
         </section>
@@ -153,17 +230,20 @@
         <!-- 8. TRUSTBLOCK -->
         <section class="py-16 bg-white border-b border-gray-100">
             <div class="container mx-auto px-4 flex flex-col md:flex-row justify-around items-center text-center gap-8">
-                <div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4 text-xl">🛡️</div>
                     <h4 class="font-bold text-primary text-xl mb-2">DIN Standards</h4>
-                    <p class="text-sm text-gray-500 max-w-xs mx-auto">Entsorgungsnachweise für Bauschutt vorhanden.</p>
+                    <p class="text-sm text-gray-500 max-w-xs">Entsorgungsnachweise.</p>
                 </div>
-                <div>
-                     <h4 class="font-bold text-primary text-xl mb-2">Qualifiziertes Team</h4>
-                    <p class="text-sm text-gray-500 max-w-xs mx-auto">Team mit BG-Bau Erfahrung.</p>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4 text-xl">👨‍🔧</div>
+                    <h4 class="font-bold text-primary text-xl mb-2">Qualifiziertes Team</h4>
+                    <p class="text-sm text-gray-500 max-w-xs">BG-Bau erfahren.</p>
                 </div>
-                <div>
-                     <h4 class="font-bold text-primary text-xl mb-2">Echte Referenzen</h4>
-                    <p class="text-sm text-gray-500 max-w-xs mx-auto">Partner lokaler Baufirmen.</p>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mb-4 text-xl">🤝</div>
+                    <h4 class="font-bold text-primary text-xl mb-2">Echte Referenzen</h4>
+                    <p class="text-sm text-gray-500 max-w-xs">Partner lokaler Baufirmen.</p>
                 </div>
             </div>
         </section>
@@ -172,28 +252,68 @@
         <section class="py-24 bg-bg">
             <div class="container mx-auto px-4 max-w-4xl">
                 <h2 class="text-3xl font-bold text-primary mb-12 text-center">Häufige Fragen</h2>
-                <div class="space-y-4">
-                    <div class="bg-white p-6 rounded shadow-sm cursor-pointer hover:shadow-md transition"><h4 class="font-bold text-primary mb-2 flex justify-between">Wann sollten Sie kommen? <span class="text-accent">+</span></h4><p class="text-gray-600 text-sm hidden">Ideal ist 1-2 Tage vor Einzug / Möblierung.</p><p class="text-gray-600 text-sm">Ideal ist 1-2 Tage vor Einzug / Möblierung.</p></div><div class="bg-white p-6 rounded shadow-sm cursor-pointer hover:shadow-md transition"><h4 class="font-bold text-primary mb-2 flex justify-between">Bekommen Sie Farbflecken weg? <span class="text-accent">+</span></h4><p class="text-gray-600 text-sm hidden">Ja, mit Speziallösern, ohne den Untergrund zu schädigen.</p><p class="text-gray-600 text-sm">Ja, mit Speziallösern, ohne den Untergrund zu schädigen.</p></div><div class="bg-white p-6 rounded shadow-sm cursor-pointer hover:shadow-md transition"><h4 class="font-bold text-primary mb-2 flex justify-between">Wie schnell sind Sie? <span class="text-accent">+</span></h4><p class="text-gray-600 text-sm hidden">Wir können mit großer Mannschaft anrücken.</p><p class="text-gray-600 text-sm">Wir können mit großer Mannschaft anrücken.</p></div><div class="bg-white p-6 rounded shadow-sm cursor-pointer hover:shadow-md transition"><h4 class="font-bold text-primary mb-2 flex justify-between">Entsorgen Sie Müll? <span class="text-accent">+</span></h4><p class="text-gray-600 text-sm hidden">Bauschutt und Verpackungen: Ja, nach Absprache.</p><p class="text-gray-600 text-sm">Bauschutt und Verpackungen: Ja, nach Absprache.</p></div><div class="bg-white p-6 rounded shadow-sm cursor-pointer hover:shadow-md transition"><h4 class="font-bold text-primary mb-2 flex justify-between">Reinigen Sie auch Fenster? <span class="text-accent">+</span></h4><p class="text-gray-600 text-sm hidden">Ja, inkl. Entfernung der Schutzfolien.</p><p class="text-gray-600 text-sm">Ja, inkl. Entfernung der Schutzfolien.</p></div><div class="bg-white p-6 rounded shadow-sm cursor-pointer hover:shadow-md transition"><h4 class="font-bold text-primary mb-2 flex justify-between">Was kostet das? <span class="text-accent">+</span></h4><p class="text-gray-600 text-sm hidden">Meist Abrechnung nach Aufwand oder qm.</p><p class="text-gray-600 text-sm">Meist Abrechnung nach Aufwand oder qm.</p></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h4 class="font-bold text-primary mb-2 flex items-start gap-3">
+                <span class="text-accent mt-1">?</span> Wann?
+            </h4>
+            <p class="text-gray-600 text-sm pl-6 leading-relaxed bg-bg/50 p-2 rounded">1-2 Tage vor Einzug.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h4 class="font-bold text-primary mb-2 flex items-start gap-3">
+                <span class="text-accent mt-1">?</span> Farbflecken?
+            </h4>
+            <p class="text-gray-600 text-sm pl-6 leading-relaxed bg-bg/50 p-2 rounded">Speziallöser vorhanden.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h4 class="font-bold text-primary mb-2 flex items-start gap-3">
+                <span class="text-accent mt-1">?</span> Schnelligkeit?
+            </h4>
+            <p class="text-gray-600 text-sm pl-6 leading-relaxed bg-bg/50 p-2 rounded">Große Teams möglich.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h4 class="font-bold text-primary mb-2 flex items-start gap-3">
+                <span class="text-accent mt-1">?</span> Müll?
+            </h4>
+            <p class="text-gray-600 text-sm pl-6 leading-relaxed bg-bg/50 p-2 rounded">Nach Absprache.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h4 class="font-bold text-primary mb-2 flex items-start gap-3">
+                <span class="text-accent mt-1">?</span> Fenster?
+            </h4>
+            <p class="text-gray-600 text-sm pl-6 leading-relaxed bg-bg/50 p-2 rounded">Inkl. Schutzfolien.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h4 class="font-bold text-primary mb-2 flex items-start gap-3">
+                <span class="text-accent mt-1">?</span> Kosten?
+            </h4>
+            <p class="text-gray-600 text-sm pl-6 leading-relaxed bg-bg/50 p-2 rounded">Nach Aufwand/qm.</p>
+        </div>
                 </div>
             </div>
         </section>
 
         <!-- 11. FINAL CTA -->
-        <section class="py-20 bg-gradient-to-br from-gray-100 to-gray-200 text-center">
-            <div class="container mx-auto px-4">
-                <h2 class="text-2xl font-bold text-primary mb-6">Machen Sie den Haken an Ihr Bauprojekt.</h2>
+        <section class="py-20 bg-gradient-to-br from-gray-100 to-gray-200 text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-white/50 pattern-grid-lg opacity-10"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <h2 class="text-3xl font-bold text-primary mb-6">Machen Sie den Haken an Ihr Projekt.</h2>
                 <a href="../kontakt.html" class="inline-block px-10 py-5 bg-accent text-primary font-bold rounded shadow-xl hover:scale-105 transition-transform">Angebot anfordern</a>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-primary text-white/60 py-12 text-sm text-center border-t border-white/10">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2025 Schuhmacher Gebäudeservices. Qualität aus NRW.</p>
-            <div class="mt-4 flex justify-center gap-6">
-                 <a href="../kontakt.html" class="hover:text-white">Kontakt</a>
-                 <a href="../ueber-uns.html" class="hover:text-white">Über uns</a>
+    <footer class="bg-primary text-white/60 py-12 text-sm text-center border-t border-white/10 mt-auto">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center bg-primary">
+             <div class="mb-4 md:mb-0">
+                 <p>&copy; 2025 Schuhmacher Gebäudeservices. Qualität aus NRW.</p>
+             </div>
+             <div class="flex gap-6 items-center">
+                 <a href="../ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
+                 <a href="../leistungsuebersicht.html" class="hover:text-white transition-colors">Leistungen</a>
+                 <a href="../kontakt.html" class="px-5 py-2 bg-white/10 rounded hover:bg-white/20 text-white font-bold transition-colors">Kontakt</a>
             </div>
         </div>
     </footer>

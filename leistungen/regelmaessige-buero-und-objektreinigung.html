@@ -28,36 +28,47 @@
         }
     </script>
 </head>
-<body class="bg-bg text-text font-sans antialiased text-[#0A0A0A]">
+<body class="bg-bg text-text font-sans antialiased text-[#0A0A0A] flex flex-col min-h-screen">
 
     <!-- Header -->
-    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 h-20 flex items-center">
+    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 h-20 flex items-center shadow-sm transition-all duration-300">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="../index.html" class="text-2xl font-extrabold text-primary tracking-tight">SCHUHMACHER<span class="text-accent">.</span></a>
-            <nav class="hidden md:flex gap-8 font-semibold text-sm text-primary">
-                <a href="../index.html" class="hover:text-accent font-bold uppercase tracking-wide text-xs">Startseite</a>
-                <a href="../index.html#services" class="hover:text-accent font-bold uppercase tracking-wide text-xs">Leistungen</a>
-                <a href="../ueber-uns.html" class="hover:text-accent font-bold uppercase tracking-wide text-xs">Über uns</a>
+            <div class="flex items-center gap-4">
+                 <!-- Back Button (Distinct) -->
+                 <a href="../index.html" class="flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 text-primary hover:bg-accent hover:text-white transition-colors" title="Zurück zur Startseite">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                 </a>
+                 <!-- Logo -->
+                 <a href="../index.html" class="block h-12">
+                    <img src="../assets/logo.png" alt="Schuhmacher Gebäudeservices" class="h-full w-auto object-contain">
+                 </a>
+            </div>
+
+            <nav class="hidden md:flex gap-8 font-semibold text-sm text-primary items-center">
+                <a href="../index.html" class="hover:text-accent font-bold uppercase tracking-wide text-xs transition-colors">Startseite</a>
+                <a href="../index.html#services" class="hover:text-accent font-bold uppercase tracking-wide text-xs transition-colors">Leistungen</a>
+                <a href="../ueber-uns.html" class="hover:text-accent font-bold uppercase tracking-wide text-xs transition-colors">Über uns</a>
+                <!-- CTA -->
                 <a href="../kontakt.html" class="px-6 py-3 bg-primary text-white rounded font-bold hover:bg-primary/90 transition shadow-lg shadow-primary/20">Angebot anfordern</a>
             </nav>
         </div>
     </header>
 
-    <main class="pt-20">
+    <main class="pt-20 flex-grow">
         <!-- 1. HERO SECTION -->
         <section class="relative min-h-[600px] flex items-center overflow-hidden">
             <div class="absolute inset-0 z-0">
-                <img src="../assets/office_cleaning.webp" class="w-full h-full object-cover animate-fade-in-slow scale-105" alt="Hero">
+                <img src="../assets/office_cleaning.webp" class="w-full h-full object-cover animate-fade-in-slow scale-105" alt="Büroreinigung NRW">
                 <div class="absolute inset-0 bg-gradient-to-r from-[#0F3A56]/95 via-[#0F3A56]/80 to-transparent"></div>
             </div>
             <div class="container mx-auto px-4 relative z-10 text-white mt-12">
                 <div class="max-w-2xl animate-slide-up">
-                    <span class="inline-block py-1 px-3 border border-white/20 rounded-full text-xs font-bold tracking-widest uppercase mb-6 bg-white/5 backdrop-blur">Sauberkeit als Visitenkarte Ihres Unternehmens.</span>
-                    <h1 class="text-5xl lg:text-6xl font-extrabold leading-[1.1] mb-6 tracking-tight">Service</h1>
+                    <span class="inline-block py-1 px-3 border border-white/20 rounded-full text-xs font-bold tracking-widest uppercase mb-6 bg-white/5 backdrop-blur">Sauberkeit als Visitenkarte.</span>
+                    <h1 class="text-5xl lg:text-6xl font-extrabold leading-[1.1] mb-6 tracking-tight">Büroreinigung NRW</h1>
                     <p class="text-xl text-gray-200 mb-8 leading-relaxed font-medium">Systematische Unterhaltsreinigung für maximale Produktivität und Werterhalt.</p>
                     
                     <ul class="space-y-3 mb-10">
-                        <li class="flex items-center gap-3"><span class="text-accent">✓</span> Feste Stamm-Teams</li><li class="flex items-center gap-3"><span class="text-accent">✓</span> 100% Termintreue</li><li class="flex items-center gap-3"><span class="text-accent">✓</span> Digitale Checks</li>
+                        <li class="flex items-center gap-3"><span class="text-accent font-bold">✓</span> <span class="font-semibold">Feste Stamm-Teams</span></li><li class="flex items-center gap-3"><span class="text-accent font-bold">✓</span> <span class="font-semibold">Digitale Checks</span></li><li class="flex items-center gap-3"><span class="text-accent font-bold">✓</span> <span class="font-semibold">100% Termintreue</span></li>
                     </ul>
 
                     <div class="flex flex-wrap gap-4">
@@ -76,7 +87,7 @@
                     <span class="font-bold text-primary">4.9/5.0 Kundenzufriedenheit</span>
                 </div>
                 <div class="flex gap-8 text-sm text-gray-500 hidden md:flex">
-                    <span class="bg-gray-50 px-3 py-1 rounded border border-gray-100">"Seit 5 Jahren pünktlich."</span><span class="bg-gray-50 px-3 py-1 rounded border border-gray-100">"Endlich keine Beschwerden mehr."</span><span class="bg-gray-50 px-3 py-1 rounded border border-gray-100">"Top Service-Level."</span>
+                    <span class="bg-gray-50 px-3 py-1 rounded border border-gray-100 text-gray-600 italic">"Seit 5 Jahren pünktlich."</span><span class="bg-gray-50 px-3 py-1 rounded border border-gray-100 text-gray-600 italic">"Endlich keine Beschwerden mehr."</span><span class="bg-gray-50 px-3 py-1 rounded border border-gray-100 text-gray-600 italic">"Top Service-Level."</span>
                 </div>
             </div>
         </section>
@@ -85,17 +96,17 @@
         <section class="py-24 bg-bg">
             <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-3xl font-bold text-primary mb-6">Wenn die Reinigung zum Störfaktor wird</h2>
-                    <p class="text-lg text-gray-600 leading-relaxed mb-8">Übervolle Papierkörbe am Morgen, Schlieren auf dem Boden oder wechselndes Personal, das die Alarmanlage nicht bedienen kann. Schlechte Reinigung kostet Nerven und Zeit.</p>
+                    <h2 class="text-3xl font-bold text-primary mb-6">Reinigung als Störfaktor?</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">Übervolle Papierkörbe, Schlieren auf dem Boden oder wechselndes Personal. Schlechte Reinigung kostet Nerven.</p>
                     <div class="p-6 bg-red-50 border-l-4 border-red-400 rounded-r-lg">
                         <p class="text-red-900 font-medium italic">"Qualitätsprobleme sind der Hauptgrund für Wechsel bei Dienstleistern."</p>
                     </div>
                 </div>
                 <div>
                     <h2 class="text-3xl font-bold text-accent mb-6">Prozesse statt Putzen</h2>
-                    <p class="text-lg text-gray-800 leading-relaxed mb-8 font-medium">Wir implementieren ein festes Reinigungskonzept, das sich unsichtbar in Ihren Betriebsablauf integriert. Kein Drama, einfach nur saubere Ergebnisse am nächsten Morgen.</p>
+                    <p class="text-lg text-gray-800 leading-relaxed mb-8 font-medium">Wir implementieren ein festes Reinigungskonzept, das sich unsichtbar integriert. Kein Drama, einfach saubere Ergebnisse.</p>
                     <ul class="space-y-4">
-                        <li class="flex items-start gap-3"><span class="text-green-500 font-bold">→</span> Repräsentative Empfangsbereiche</li><li class="flex items-start gap-3"><span class="text-green-500 font-bold">→</span> Hygienische Arbeitsplätze</li><li class="flex items-start gap-3"><span class="text-green-500 font-bold">→</span> Motivierteres Personal</li><li class="flex items-start gap-3"><span class="text-green-500 font-bold">→</span> Werterhalt der Immobilie</li>
+                        <li class="flex items-start gap-3 p-3 bg-white rounded shadow-sm border border-gray-100"><span class="text-green-500 font-bold mt-0.5">→</span> <span class="font-medium text-gray-700">Repräsentative Empfangsbereiche</span></li><li class="flex items-start gap-3 p-3 bg-white rounded shadow-sm border border-gray-100"><span class="text-green-500 font-bold mt-0.5">→</span> <span class="font-medium text-gray-700">Hygienische Arbeitsplätze</span></li><li class="flex items-start gap-3 p-3 bg-white rounded shadow-sm border border-gray-100"><span class="text-green-500 font-bold mt-0.5">→</span> <span class="font-medium text-gray-700">Motivierte Mitarbeiter</span></li><li class="flex items-start gap-3 p-3 bg-white rounded shadow-sm border border-gray-100"><span class="text-green-500 font-bold mt-0.5">→</span> <span class="font-medium text-gray-700">Werterhalt der Immobilie</span></li>
                     </ul>
                 </div>
             </div>
@@ -105,16 +116,18 @@
         <section class="py-24 bg-white">
             <div class="container mx-auto px-4">
                 <div class="max-w-3xl mb-12">
-                    <h2 class="text-3xl font-bold text-primary mb-4">Unser Leistungsmodul: Unterhaltsreinigung</h2>
+                    <h2 class="text-3xl font-bold text-primary mb-4">Leistungsmodul: Unterhaltsreinigung</h2>
                     <p class="text-gray-600">Transparenz bis ins Detail.</p>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
-                        <div class="flex items-start gap-3"><div class="w-2 h-2 mt-2 rounded-full bg-accent"></div><p class="text-gray-700">Oberflächenreinigung (Schreibtische, Ablagen) nach Farbcode</p></div><div class="flex items-start gap-3"><div class="w-2 h-2 mt-2 rounded-full bg-accent"></div><p class="text-gray-700">Bodenpflege (Saugen/Wischen) mit abgestimmter Chemie</p></div><div class="flex items-start gap-3"><div class="w-2 h-2 mt-2 rounded-full bg-accent"></div><p class="text-gray-700">Sanitärhygiene und Auffüllen von Verbrauchsmaterial</p></div><div class="flex items-start gap-3"><div class="w-2 h-2 mt-2 rounded-full bg-accent"></div><p class="text-gray-700">Leeren von Papierkörben und Mülltrennstationen</p></div><div class="flex items-start gap-3"><div class="w-2 h-2 mt-2 rounded-full bg-accent"></div><p class="text-gray-700">Reinigung von Teeküchen und Pausenräumen</p></div><div class="flex items-start gap-3"><div class="w-2 h-2 mt-2 rounded-full bg-accent"></div><p class="text-gray-700">Griffspurenentfernung an Türen und Glasflächen</p></div>
+                        <div class="flex items-start gap-3"><div class="w-1.5 h-1.5 mt-2.5 rounded-full bg-accent flex-shrink-0"></div><p class="text-gray-700 font-medium">Oberflächenreinigung nach Farbcode</p></div><div class="flex items-start gap-3"><div class="w-1.5 h-1.5 mt-2.5 rounded-full bg-accent flex-shrink-0"></div><p class="text-gray-700 font-medium">Bodenpflege (Saugen/Wischen)</p></div><div class="flex items-start gap-3"><div class="w-1.5 h-1.5 mt-2.5 rounded-full bg-accent flex-shrink-0"></div><p class="text-gray-700 font-medium">Sanitärhygiene & Verbrauchsmaterial</p></div><div class="flex items-start gap-3"><div class="w-1.5 h-1.5 mt-2.5 rounded-full bg-accent flex-shrink-0"></div><p class="text-gray-700 font-medium">Mülltrennstationen leeren</p></div><div class="flex items-start gap-3"><div class="w-1.5 h-1.5 mt-2.5 rounded-full bg-accent flex-shrink-0"></div><p class="text-gray-700 font-medium">Teeküchen-Service</p></div><div class="flex items-start gap-3"><div class="w-1.5 h-1.5 mt-2.5 rounded-full bg-accent flex-shrink-0"></div><p class="text-gray-700 font-medium">Griffspurenentfernung</p></div>
                     </div>
-                    <div class="bg-primary text-white p-8 rounded-2xl shadow-xl">
-                        <h3 class="font-bold text-accent text-lg mb-4 uppercase tracking-wider">Use Case</h3>
-                        <p class="text-gray-200 italic leading-relaxed">"Bei einer Kanzlei in Düsseldorf (2.500 m²) konnten wir durch Umstellung auf unser System die Reklamationsquote auf 0% senken."</p>
+                    <div class="bg-primary text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                        <div class="flex items-center gap-2 mb-4">
+                             <div class="px-2 py-1 bg-accent text-primary text-xs font-bold rounded uppercase">Use Case</div>
+                        </div>
+                        <p class="text-gray-200 italic leading-relaxed font-medium">"Kanzlei in Düsseldorf (2.500 m²): Durch unser System sank die Reklamationsquote innerhalb von 4 Wochen auf 0%."</p>
                     </div>
                 </div>
             </div>
@@ -123,9 +136,33 @@
         <!-- 5. WARUM SCHUHMACHER -->
         <section class="py-24 bg-bg-secondary">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold text-center text-primary mb-16">Darum Schuhmacher: Fakten statt Versprechen</h2>
+                <h2 class="text-3xl font-bold text-center text-primary mb-16">Fakten statt Versprechen</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="p-6 bg-white rounded shadow-sm border-l-4 border-accent"><h4 class="font-bold text-primary mb-2">✓ Vorteil</h4><p class="text-sm text-gray-600">Objektleiter mit direkter Durchwahl</p></div><div class="p-6 bg-white rounded shadow-sm border-l-4 border-accent"><h4 class="font-bold text-primary mb-2">✓ Vorteil</h4><p class="text-sm text-gray-600">Schulung nach DSGVO (Datenschutz am Schreibtisch)</p></div><div class="p-6 bg-white rounded shadow-sm border-l-4 border-accent"><h4 class="font-bold text-primary mb-2">✓ Vorteil</h4><p class="text-sm text-gray-600">Verwendung öko-zertifizierter Reinigungsmittel</p></div><div class="p-6 bg-white rounded shadow-sm border-l-4 border-accent"><h4 class="font-bold text-primary mb-2">✓ Vorteil</h4><p class="text-sm text-gray-600">ISO/DIN-orientierte Prozessabläufe</p></div><div class="p-6 bg-white rounded shadow-sm border-l-4 border-accent"><h4 class="font-bold text-primary mb-2">✓ Vorteil</h4><p class="text-sm text-gray-600">Haftpflichtversicherung mit hoher Deckungssumme</p></div><div class="p-6 bg-white rounded shadow-sm border-l-4 border-accent"><h4 class="font-bold text-primary mb-2">✓ Vorteil</h4><p class="text-sm text-gray-600">Transparente Zeiterfassung der Mitarbeiter</p></div>
+                    
+        <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-accent/50 transition-colors">
+            <div class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold mb-3">✓</div>
+            <p class="text-gray-700 font-semibold">Objektleiter mit Durchwahl</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-accent/50 transition-colors">
+            <div class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold mb-3">✓</div>
+            <p class="text-gray-700 font-semibold">Datenschutz-Schulung (DSGVO)</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-accent/50 transition-colors">
+            <div class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold mb-3">✓</div>
+            <p class="text-gray-700 font-semibold">Öko-Zertifizierte Mittel</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-accent/50 transition-colors">
+            <div class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold mb-3">✓</div>
+            <p class="text-gray-700 font-semibold">ISO-konforme Prozesse</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-accent/50 transition-colors">
+            <div class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold mb-3">✓</div>
+            <p class="text-gray-700 font-semibold">Hohe Haftpflichtdeckung</p>
+        </div>
+        <div class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:border-accent/50 transition-colors">
+            <div class="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold mb-3">✓</div>
+            <p class="text-gray-700 font-semibold">Transparente Zeiterfassung</p>
+        </div>
                 </div>
             </div>
         </section>
@@ -135,7 +172,27 @@
             <div class="container mx-auto px-4">
                 <h2 class="text-3xl font-bold text-center text-primary mb-16">Unser Prozess</h2>
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <div class="relative pl-8 md:pl-0"><div class="md:hidden absolute left-0 top-0 text-3xl font-bold text-gray-100">1</div><h4 class="font-bold text-primary text-lg mb-2"><span class="hidden md:inline text-accent mr-2">1.</span>Bestandsaufnahme</h4><p class="text-gray-600 text-sm">Wir analysieren Flächen, Materialien und Intervalle vor Ort.</p></div><div class="relative pl-8 md:pl-0"><div class="md:hidden absolute left-0 top-0 text-3xl font-bold text-gray-100">2</div><h4 class="font-bold text-primary text-lg mb-2"><span class="hidden md:inline text-accent mr-2">2.</span>Implementierung</h4><p class="text-gray-600 text-sm">Erstellung des Leistungsverzeichnisses und Einweisung des festen Teams.</p></div><div class="relative pl-8 md:pl-0"><div class="md:hidden absolute left-0 top-0 text-3xl font-bold text-gray-100">3</div><h4 class="font-bold text-primary text-lg mb-2"><span class="hidden md:inline text-accent mr-2">3.</span>Durchführung</h4><p class="text-gray-600 text-sm">Regelmäßige Reinigung nach definiertem Standard.</p></div><div class="relative pl-8 md:pl-0"><div class="md:hidden absolute left-0 top-0 text-3xl font-bold text-gray-100">4</div><h4 class="font-bold text-primary text-lg mb-2"><span class="hidden md:inline text-accent mr-2">4.</span>Qualitätssicherung</h4><p class="text-gray-600 text-sm">Monatliche Begehungen und digitaler Report durch Objektleiter.</p></div>
+                    
+        <div class="relative pl-4 md:pl-0 border-l-2 md:border-l-0 border-accent/30 md:border-none pb-8 md:pb-0 last:pb-0">
+             <div class="hidden md:flex w-12 h-12 bg-primary text-white rounded-xl items-center justify-center font-bold text-xl mb-4 shadow-lg shadow-primary/20">1</div>
+             <h4 class="font-bold text-primary text-lg mb-2"><span class="md:hidden text-accent mr-2">1.</span>Analyse</h4>
+             <p class="text-gray-600 text-sm leading-relaxed">Flächen & Intervalle.</p>
+        </div>
+        <div class="relative pl-4 md:pl-0 border-l-2 md:border-l-0 border-accent/30 md:border-none pb-8 md:pb-0 last:pb-0">
+             <div class="hidden md:flex w-12 h-12 bg-primary text-white rounded-xl items-center justify-center font-bold text-xl mb-4 shadow-lg shadow-primary/20">2</div>
+             <h4 class="font-bold text-primary text-lg mb-2"><span class="md:hidden text-accent mr-2">2.</span>Konzept</h4>
+             <p class="text-gray-600 text-sm leading-relaxed">Leistungsverzeichnis.</p>
+        </div>
+        <div class="relative pl-4 md:pl-0 border-l-2 md:border-l-0 border-accent/30 md:border-none pb-8 md:pb-0 last:pb-0">
+             <div class="hidden md:flex w-12 h-12 bg-primary text-white rounded-xl items-center justify-center font-bold text-xl mb-4 shadow-lg shadow-primary/20">3</div>
+             <h4 class="font-bold text-primary text-lg mb-2"><span class="md:hidden text-accent mr-2">3.</span>Start</h4>
+             <p class="text-gray-600 text-sm leading-relaxed">Team-Einweisung.</p>
+        </div>
+        <div class="relative pl-4 md:pl-0 border-l-2 md:border-l-0 border-accent/30 md:border-none pb-8 md:pb-0 last:pb-0">
+             <div class="hidden md:flex w-12 h-12 bg-primary text-white rounded-xl items-center justify-center font-bold text-xl mb-4 shadow-lg shadow-primary/20">4</div>
+             <h4 class="font-bold text-primary text-lg mb-2"><span class="md:hidden text-accent mr-2">4.</span>Qualität</h4>
+             <p class="text-gray-600 text-sm leading-relaxed">Monatliche Checks.</p>
+        </div>
                 </div>
             </div>
         </section>
@@ -143,9 +200,29 @@
         <!-- 7. ZIELGRUPPEN -->
         <section class="py-24 bg-primary text-white">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl font-bold mb-12 text-center">Branchenlösungen</h2>
+                <h2 class="text-3xl font-bold mb-12 text-center">Für wen wir arbeiten</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                    <div class="p-4 bg-white/10 rounded border border-white/20"><h5 class="font-bold text-white mb-1">Kanzleien/Notare</h5><p class="text-xs text-gray-300">Diskretion und Datenschutz haben oberste Priorität.</p></div><div class="p-4 bg-white/10 rounded border border-white/20"><h5 class="font-bold text-white mb-1">Unternehmenssitze</h5><p class="text-xs text-gray-300">Repräsentativität für Empfang und Boardrooms.</p></div><div class="p-4 bg-white/10 rounded border border-white/20"><h5 class="font-bold text-white mb-1">Startups/Agenturen</h5><p class="text-xs text-gray-300">Flexible Zeiten, die zum New Work passen.</p></div><div class="p-4 bg-white/10 rounded border border-white/20"><h5 class="font-bold text-white mb-1">Verwaltungen</h5><p class="text-xs text-gray-300">Kosteneffizienz und rechtssichere Vergabe.</p></div><div class="p-4 bg-white/10 rounded border border-white/20"><h5 class="font-bold text-white mb-1">Praxen</h5><p class="text-xs text-gray-300">Hygiene nach strengen Richtlinien.</p></div>
+                    
+        <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition">
+            <h5 class="font-bold text-white mb-1 tracking-wide">Kanzleien</h5>
+            <p class="text-xs text-blue-100/80">Diskretion.</p>
+        </div>
+        <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition">
+            <h5 class="font-bold text-white mb-1 tracking-wide">Companies</h5>
+            <p class="text-xs text-blue-100/80">Repräsentativität.</p>
+        </div>
+        <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition">
+            <h5 class="font-bold text-white mb-1 tracking-wide">Startups</h5>
+            <p class="text-xs text-blue-100/80">Flexibilität.</p>
+        </div>
+        <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition">
+            <h5 class="font-bold text-white mb-1 tracking-wide">Behörden</h5>
+            <p class="text-xs text-blue-100/80">Rechtssicherheit.</p>
+        </div>
+        <div class="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition">
+            <h5 class="font-bold text-white mb-1 tracking-wide">Praxen</h5>
+            <p class="text-xs text-blue-100/80">Hygiene.</p>
+        </div>
                 </div>
             </div>
         </section>
@@ -153,17 +230,20 @@
         <!-- 8. TRUSTBLOCK -->
         <section class="py-16 bg-white border-b border-gray-100">
             <div class="container mx-auto px-4 flex flex-col md:flex-row justify-around items-center text-center gap-8">
-                <div>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4 text-xl">🛡️</div>
                     <h4 class="font-bold text-primary text-xl mb-2">DIN Standards</h4>
-                    <p class="text-sm text-gray-500 max-w-xs mx-auto">Wir arbeiten streng nach Arbeitsschutzgesetzen und Hygiene-Standards.</p>
+                    <p class="text-sm text-gray-500 max-w-xs">Arbeitsschutz & Hygiene-Standards.</p>
                 </div>
-                <div>
-                     <h4 class="font-bold text-primary text-xl mb-2">Qualifiziertes Team</h4>
-                    <p class="text-sm text-gray-500 max-w-xs mx-auto">Unsere Mitarbeiter sind fest angestellt, deutschsprachig (B1+) und sicherheitsüberprüft.</p>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4 text-xl">👨‍🔧</div>
+                    <h4 class="font-bold text-primary text-xl mb-2">Qualifiziertes Team</h4>
+                    <p class="text-sm text-gray-500 max-w-xs">Deutschsprachig & sicherheitsüberprüft.</p>
                 </div>
-                <div>
-                     <h4 class="font-bold text-primary text-xl mb-2">Echte Referenzen</h4>
-                    <p class="text-sm text-gray-500 max-w-xs mx-auto">Vertraut von über 50 Unternehmen in der Region.</p>
+                <div class="flex flex-col items-center">
+                    <div class="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mb-4 text-xl">🤝</div>
+                    <h4 class="font-bold text-primary text-xl mb-2">Echte Referenzen</h4>
+                    <p class="text-sm text-gray-500 max-w-xs">50+ Firmenkunden.</p>
                 </div>
             </div>
         </section>
@@ -172,28 +252,68 @@
         <section class="py-24 bg-bg">
             <div class="container mx-auto px-4 max-w-4xl">
                 <h2 class="text-3xl font-bold text-primary mb-12 text-center">Häufige Fragen</h2>
-                <div class="space-y-4">
-                    <div class="bg-white p-6 rounded shadow-sm cursor-pointer hover:shadow-md transition"><h4 class="font-bold text-primary mb-2 flex justify-between">Sind die Reinigungszeiten flexibel? <span class="text-accent">+</span></h4><p class="text-gray-600 text-sm hidden">Ja, wir arbeiten vor, während oder nach Ihren Bürozeiten.</p><p class="text-gray-600 text-sm">Ja, wir arbeiten vor, während oder nach Ihren Bürozeiten.</p></div><div class="bg-white p-6 rounded shadow-sm cursor-pointer hover:shadow-md transition"><h4 class="font-bold text-primary mb-2 flex justify-between">Haben wir einen festen Ansprechpartner? <span class="text-accent">+</span></h4><p class="text-gray-600 text-sm hidden">Ja, jedem Objekt ist ein fester Objektleiter zugewiesen.</p><p class="text-gray-600 text-sm">Ja, jedem Objekt ist ein fester Objektleiter zugewiesen.</p></div><div class="bg-white p-6 rounded shadow-sm cursor-pointer hover:shadow-md transition"><h4 class="font-bold text-primary mb-2 flex justify-between">Wie läuft die Schlüsselverwaltung? <span class="text-accent">+</span></h4><p class="text-gray-600 text-sm hidden">Protokolliert und sicher im Tresor.</p><p class="text-gray-600 text-sm">Protokolliert und sicher im Tresor.</p></div><div class="bg-white p-6 rounded shadow-sm cursor-pointer hover:shadow-md transition"><h4 class="font-bold text-primary mb-2 flex justify-between">Nutzen Sie umweltfreundliche Mittel? <span class="text-accent">+</span></h4><p class="text-gray-600 text-sm hidden">Ja, wir setzen auf Konzentrate und ökologische Marken.</p><p class="text-gray-600 text-sm">Ja, wir setzen auf Konzentrate und ökologische Marken.</p></div><div class="bg-white p-6 rounded shadow-sm cursor-pointer hover:shadow-md transition"><h4 class="font-bold text-primary mb-2 flex justify-between">Was passiert bei Urlaub der Kraft? <span class="text-accent">+</span></h4><p class="text-gray-600 text-sm hidden">Unser Springer-Pool garantiert die Vertretung.</p><p class="text-gray-600 text-sm">Unser Springer-Pool garantiert die Vertretung.</p></div><div class="bg-white p-6 rounded shadow-sm cursor-pointer hover:shadow-md transition"><h4 class="font-bold text-primary mb-2 flex justify-between">Gibt es eine Mindestlaufzeit? <span class="text-accent">+</span></h4><p class="text-gray-600 text-sm hidden">Wir überzeugen durch Leistung, nicht durch Knebelverträge.</p><p class="text-gray-600 text-sm">Wir überzeugen durch Leistung, nicht durch Knebelverträge.</p></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h4 class="font-bold text-primary mb-2 flex items-start gap-3">
+                <span class="text-accent mt-1">?</span> Wann reinigen Sie?
+            </h4>
+            <p class="text-gray-600 text-sm pl-6 leading-relaxed bg-bg/50 p-2 rounded">Vor, während oder nach Bürozeiten.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h4 class="font-bold text-primary mb-2 flex items-start gap-3">
+                <span class="text-accent mt-1">?</span> Feste Ansprechpartner?
+            </h4>
+            <p class="text-gray-600 text-sm pl-6 leading-relaxed bg-bg/50 p-2 rounded">Ja, fester Objektleiter.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h4 class="font-bold text-primary mb-2 flex items-start gap-3">
+                <span class="text-accent mt-1">?</span> Schlüssel?
+            </h4>
+            <p class="text-gray-600 text-sm pl-6 leading-relaxed bg-bg/50 p-2 rounded">Sicher im Tresor.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h4 class="font-bold text-primary mb-2 flex items-start gap-3">
+                <span class="text-accent mt-1">?</span> Umwelt?
+            </h4>
+            <p class="text-gray-600 text-sm pl-6 leading-relaxed bg-bg/50 p-2 rounded">Ja, Öko-Konzentrate.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h4 class="font-bold text-primary mb-2 flex items-start gap-3">
+                <span class="text-accent mt-1">?</span> Urlaub?
+            </h4>
+            <p class="text-gray-600 text-sm pl-6 leading-relaxed bg-bg/50 p-2 rounded">Springer-Pool greift.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <h4 class="font-bold text-primary mb-2 flex items-start gap-3">
+                <span class="text-accent mt-1">?</span> Vertrag?
+            </h4>
+            <p class="text-gray-600 text-sm pl-6 leading-relaxed bg-bg/50 p-2 rounded">Keine Knebelverträge.</p>
+        </div>
                 </div>
             </div>
         </section>
 
         <!-- 11. FINAL CTA -->
-        <section class="py-20 bg-gradient-to-br from-gray-100 to-gray-200 text-center">
-            <div class="container mx-auto px-4">
-                <h2 class="text-2xl font-bold text-primary mb-6">Investieren Sie in Sauberkeit. Es zahlt sich aus.</h2>
+        <section class="py-20 bg-gradient-to-br from-gray-100 to-gray-200 text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-white/50 pattern-grid-lg opacity-10"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <h2 class="text-3xl font-bold text-primary mb-6">Investieren Sie in Sauberkeit.</h2>
                 <a href="../kontakt.html" class="inline-block px-10 py-5 bg-accent text-primary font-bold rounded shadow-xl hover:scale-105 transition-transform">Angebot anfordern</a>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-primary text-white/60 py-12 text-sm text-center border-t border-white/10">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2025 Schuhmacher Gebäudeservices. Qualität aus NRW.</p>
-            <div class="mt-4 flex justify-center gap-6">
-                 <a href="../kontakt.html" class="hover:text-white">Kontakt</a>
-                 <a href="../ueber-uns.html" class="hover:text-white">Über uns</a>
+    <footer class="bg-primary text-white/60 py-12 text-sm text-center border-t border-white/10 mt-auto">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center bg-primary">
+             <div class="mb-4 md:mb-0">
+                 <p>&copy; 2025 Schuhmacher Gebäudeservices. Qualität aus NRW.</p>
+             </div>
+             <div class="flex gap-6 items-center">
+                 <a href="../ueber-uns.html" class="hover:text-white transition-colors">Über uns</a>
+                 <a href="../leistungsuebersicht.html" class="hover:text-white transition-colors">Leistungen</a>
+                 <a href="../kontakt.html" class="px-5 py-2 bg-white/10 rounded hover:bg-white/20 text-white font-bold transition-colors">Kontakt</a>
             </div>
         </div>
     </footer>
